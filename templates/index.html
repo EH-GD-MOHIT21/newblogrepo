@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <script src="{% static 'script.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,800;1,400;1,700&amp;display=swap" />
+
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Nested</h1>
+        </div>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <ul class="mainMenu">
+            <li><a href="/">Home</a></li>
+            <li><a href="category">Category</a></li>
+            <li><a href="live">LIVE</a></li>
+            <li><a href="about" class="last_ico">About</a></li>
+            <div class="closeMenu"><i class="fa fa-times"></i></div>
+            <span class="icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-github"></i>
+                </span>
+        </ul>
+    </nav>
+    <div class="Home_page">
+        <div class="childbody">
+            <h1 class="title">{{data.title}}</h1>
+            <hr class="title_hr">
+            <div class="bodyhandler">
+                <div class="first_container">
+                    <img class="Imgg" id="im1" src="{{data.img1.url}}" align="right" />
+                    <p id="1">{{data.desc1}}</p>
+                </div>
+                <hr class="container_hr">
+                <div class="second_container">
+                    <img class="Imgg" id="im2" src="{{data.img2.url}}" align="left" />
+                    <p id="2">{{data.desc2}}</p>
+                </div>
+                <hr class="container_hr">
+                <p id="3">{{data.desc3}}</p>
+            </div>
+        </div>
+
+
+        <div class="header">
+            <h3 class="author">{{data.name}}</h3>
+            <h5 class="timestamp">{{data.timestamp}}</h5>
+            <h4 class="location">{{data.place}}</h4>
+            <h5 class="category">category:{{data.category}}</h5>
+        </div>
+
+
+        <div class="mainbtn">
+            <a href="/showstuff" class="but">
+            Continue Reading
+        </a>
+        </div>
+    </div>
+    <script src="{% static 'app.js' %}"></script>
+
+</body>
+
+</html>

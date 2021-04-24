@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories-Blog</title>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'cat.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <h1>Nested</h1>
+        </div>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <ul class="mainMenu">
+            <li><a href="/">Home</a></li>
+            <li><a href="category">Category</a></li>
+            <li><a href="live">LIVE</a></li>
+            <li><a href="about" class="last_ico">About</a></li>
+            <div class="closeMenu"><i class="fa fa-times"></i></div>
+            <span class="icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-github"></i>
+            </span>
+        </ul>
+    </nav>
+    <div class="header-container">
+        <div class="available-category">
+            <h1>Blog Filters:</h1>
+            <button onclick="showcategories()" id="hemant-button">Show Filters</button> {% for data in ans %} <span id="{{ forloop.counter0 }}">{{data}} </span> {% endfor %}
+        </div>
+        <span id="js-cat-show"></span>
+        <div class="search-specific" id="search-specific">
+
+            <form action="/query" method="POST" onsubmit="return validate_input()">
+                {% csrf_token %}
+                <p>
+                    <fieldset>
+                        <legend>Your Queries</legend>
+                        <input name="data" autocomplete="off" id="query_input" placeholder="search for fields" type="text">
+                    </fieldset>
+                </p>
+                <p><label>Fields: </label>
+                    <select name="filters" id="filters">
+                        <option value="title">Title</option>
+                        <option value="author">Author</option>
+                        <option value="location">Location</option>
+                        <option value="category">Category</option>
+                        <option value="timestamp">Timestamp</option>
+                    </select>
+                </p>
+                <p><button type="submit" id="display-result">Find Results</button></p>
+                {% if message %}
+                <span class="errorlog" id="error-log">Required Data Doesn't Exist!!!</span>
+                <script>
+                    document.getElementById("search-specific").style.display = "block";
+                    document.getElementById("hemant-button").innerText = "Hide Filters";
+                </script>
+                {% endif %}
+            </form>
+
+        </div>
+    </div>
+
+    <div class="content-container">
+        {% for field in query %}
+        <div class="elmhandler">
+            <form action="mychoice" method="POST">
+                {% csrf_token %}
+                <input type="text" name="queryme" value="{{field.title}}">
+                <h2 class="first-head"><span id="title">{{field.title}}</span>
+                </h2>
+                <div class="imgwala">
+                    <img src="{{field.img1.url}}" id="unique-image">
+                </div>
+                <div class="masala">
+                    <h3>Author: {{field.name}}</h3>
+                    <h3>Location: {{field.place}}</h3>
+                    <h3>Category: {{field.category}}</h3>
+                    <h3>Timestamp: {{field.timestamp}}</h3>
+                </div>
+                <button type="submit" id="dupbut">Read Now</button>
+            </form>
+        </div>
+        {% endfor %}
+
+    </div>
+
+    <script src="{% static 'app.js' %}"></script>
+    <script>
+        function showcategories() {
+            if (document.getElementById("hemant-button").innerText == "Hide Filters") {
+                document.getElementById("js-cat-show").textContent = "";
+                document.getElementById("search-specific").style.display = "none";
+                document.getElementById("hemant-button").innerText = "Show Filters";
+                document.getElementById("search-specific").style.opacity = 1;
+
+            } else {
+                var mydiv = document.getElementById("search-specific");
+                mydiv.classList.add("nested-class");
+                mydiv.style.display = "block";
+                var i = 0;
+                var string = "Categories: ";
+                while (true) {
+                    try {
+                        value1 = document.getElementById("" + i + "").textContent;
+                        string += value1 + ", ";
+                        i += 1;
+                    } catch (err) {
+                        break;
+                    }
+                }
+                document.getElementById("js-cat-show").textContent = string.slice(0, string.length - 2);
+                document.getElementById("hemant-button").innerText = "Hide Filters";
+
+                document.getElementById("js-cat-show").style.fontWeight = 800;
+            }
+        }
+
+        function validate_input() {
+
+            var text = document.getElementById("query_input").value;
+            if (text.length < 3) {
+                document.getElementById("error-log").textContent = "!!!! Use Appropriate Data.";
+                document.getElementById("error-log").style.color = "crimson";
+                document.getElementById("error-log").style.fontWeight = 800;
+                return false;
+            }
+            document.getElementById("error-log").textContent = "";
+            return true;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+
+body {
+    background-image: url("root/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.wrapper {
+    margin-top: 6%;
+}
+
+.wrapper h1 {
+    font-family: 'Allura', cursive;
+    font-size: 52px;
+    color: black;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.team .team_member {
+    background: #fff;
+    margin: 5px;
+    z-index: -10;
+    margin-bottom: 50px;
+    width: 300px;
+    margin-top: 40px;
+    padding: 20px;
+    line-height: 20px;
+    color: #8e8b8b;
+    position: relative;
+}
+
+.team .team_member h3 {
+    color: #81c644;
+    font-size: 26px;
+    margin-top: 50px;
+}
+
+.team .team_member p.role {
+    color: purple;
+    margin: 12px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.team .team_member .team_img {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.team .team_member .team_img img {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+}
+
+.bubbles img {
+    width: 50px;
+    z-index: -15;
+    animation: movethem 7s linear infinite;
+}
+
+.bubbles {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+}
+
+.typing,
+.typing1,
+.typing2 {
+    color: crimson;
+    font-weight: 800;
+}
+
+@keyframes movethem {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+
+.bubbles img:nth-child(1) {
+    animation-delay: 2s;
+}
+
+.bubbles img:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.bubbles img:nth-child(3) {
+    animation-delay: 3s;
+}
+
+.bubbles img:nth-child(4) {
+    animation-delay: 2.5s;
+}
+
+.bubbles img:nth-child(5) {
+    animation-delay: 3s;
+}
+
+.bubbles img:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.bubbles img:nth-child(7) {
+    animation-delay: 1.7s;
+}
+
+@media (max-width: 1009px) {
+    .team .team_member {
+        width: 45%;
+    }
+}
+
+@media(max-width:709px) {
+    .team .team_member {
+        width: 80%;
+    }
+}
+
+@media(max-width:360px) {
+    #out-of-box {
+        display: none;
+    }
+}

@@ -1,0 +1,175 @@
+.available-category {
+    margin-top: 10px;
+    text-align: center;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/* A Temp class for Animation */
+
+.nested-class {
+    animation: mohit 1.5s linear;
+}
+
+.header-container {
+    display: block;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+
+.search-specific {
+    margin: 10px;
+    display: none;
+}
+
+.search-specific p {
+    text-align: center;
+    margin: 5px auto;
+}
+
+#js-cat-show {
+    display: block;
+    text-align: center;
+    color: crimson;
+}
+
+
+/* Fieldset Denotes the upper title of input in category.html page */
+
+fieldset {
+    width: 40%;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.search-specific input {
+    text-align: center;
+    width: 98%;
+    font-size: 20px;
+    height: 30px;
+    outline: none;
+    border: none;
+    background: none;
+    padding-bottom: 8px;
+}
+
+.available-category span {
+    display: none;
+    /* Temporary none display we'll use js to block it.*/
+}
+
+
+/*A input container to hold search name display is none always*/
+
+.content-container .elmhandler input {
+    display: none;
+}
+
+.content-container .elmhandler {
+    width: 65%;
+    margin: 20px auto;
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 50%);
+    background: #CC95C0;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
+    border-radius: 20px;
+    padding: 1px;
+}
+
+.content-container .elmhandler .imgwala {
+    float: left;
+}
+
+.content-container .elmhandler .imgwala #unique-image {
+    margin: 15px;
+    border-radius: 20px;
+    width: 250px;
+    height: 250px;
+}
+
+.content-container .elmhandler .masala {
+    float: right;
+    margin: 70px 0px;
+    margin-right: 63px;
+}
+
+.content-container .elmhandler .first-head {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 8px;
+}
+
+.content-container .elmhandler .first-head #title {
+    color: crimson;
+}
+
+.header-container .search-specific form .errorlog {
+    color: crimson;
+    font-weight: 800;
+}
+
+
+/* Key Frame For mohit */
+
+@keyframes mohit {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.20;
+    }
+    50% {
+        opacity: 0.40;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*Media query for category.html starts here*/
+
+@media (max-width: 1000px) {
+    .content-container .elmhandler {
+        width: 90%;
+    }
+    fieldset {
+        width: 60%;
+    }
+}
+
+@media (max-width: 730px) {
+    .content-container .elmhandler .imgwala {
+        float: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .content-container .elmhandler .masala {
+        float: none;
+        margin: 20px;
+        text-align: center;
+    }
+    .content-container .elmhandler #dupbut {
+        width: 50%;
+    }
+    fieldset {
+        width: 100%;
+    }
+}
+
+@media (max-width: 310px) {
+    .content-container .elmhandler {
+        width: 100%;
+    }
+    .content-container .elmhandler .first-head {
+        font-size: 18px;
+    }
+}

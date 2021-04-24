@@ -1,0 +1,282 @@
+* {
+    font-family: 'Noto Serif', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Home_page {
+    width: 75%;
+    border: 1px solid purple;
+    margin: 2px auto;
+    border-radius: 10px;
+}
+
+body {
+    background: #CC95C0;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.childbody .bodyhandler .Imgg {
+    height: 230px;
+    border-radius: 10px;
+}
+
+.childbody .bodyhandler #im1 {
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.childbody .bodyhandler #im2 {
+    margin-top: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.Home_page .childbody .bodyhandler .second_container {
+    margin-top: 40px;
+}
+
+.Home_page .childbody hr.title_hr,
+.Home_page .childbody .bodyhandler hr.container_hr {
+    margin-top: 20px;
+    border-top: 2px dotted purple;
+    border-bottom: purple;
+}
+
+
+/*-----------------------------property of live.html-------------------------*/
+
+iframe {
+    width: 100%;
+    height: 450px;
+}
+
+
+/*--------------------Overriding navbar's properties---------------------------*/
+
+nav h1,
+.childbody .title {
+    margin: 20px;
+    text-align: center;
+    color: purple;
+}
+
+nav h1 {
+    color: lightgreen;
+}
+
+.header {
+    margin: 20px;
+    justify-content: space-between;
+    text-align: right;
+    color: #30336b;
+}
+
+#changer {
+    color: red;
+}
+
+#gle {
+    color: #6c5ce7;
+    background-color: #dfe6e9;
+    font-weight: 600;
+    padding: 0 4px;
+    border-radius: 5px;
+}
+
+.header h3 {
+    display: inline-block;
+    text-align: center;
+}
+
+.childbody .bodyhandler #\33 {
+    display: block;
+    margin-left: 40px;
+}
+
+.childbody .bodyhandler p {
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+    text-align: justify;
+    letter-spacing: 0.4px;
+    font-size: 20px;
+}
+
+
+/* .childbody a {
+    color: white;
+    margin: 20px;
+} */
+
+.mainbtn .but {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    /* 25% */
+    text-decoration: none;
+    margin: 20px auto;
+    padding: 14px;
+    border-radius: 14px;
+    background: none;
+    border: 2px solid black;
+    color: black;
+}
+
+p {
+    text-align: justify;
+}
+
+
+/* button animation starts here */
+
+.content-container .elmhandler #dupbut {
+    display: block;
+    width: 95%;
+    margin: 20px auto;
+    border-radius: 10px;
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    background: none;
+}
+
+
+/*Design of Buttons for All pages*/
+
+.header-container .available-category #hemant-button,
+.header-container .search-specific #display-result {
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 40%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    height: 40px;
+    background: none;
+}
+
+.header-container .search-specific form p fieldset input {
+    outline: none;
+    border: none;
+}
+
+.header-container .search-specific select {
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 15px;
+    text-align: center;
+    text-align-last: center;
+    background: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+
+/*Hover Effect for Buttons*/
+
+.mainbtn .but:hover,
+.content-container .elmhandler #dupbut:hover,
+.header-container .available-category #hemant-button:hover,
+.header-container .search-specific #display-result:hover {
+    color: cyan;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #33ffff, 0 0 10px #66ffff;
+    background: rgba(0, 0, 0, 0.7);
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+
+/* Hover effect background shadow manager*/
+
+.mainbtn .mainbtn .but:hover,
+.content-container .elmhandler .elmhandler #dupbut:hover,
+.header-container .available-category .available-category #hemant-button:hover,
+.header-container .search-specific .search-specific #display-result:hover {
+    box-shadow: none;
+}
+
+.content-container .elmhandler #dupbut {
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+
+/*----------------------------Media query starts here-------------------------------*/
+
+@media (max-width:1000px) {
+    .header-container .available-category #hemant-button,
+    .header-container .search-specific #display-result {
+        width: 60%;
+    }
+    .Home_page {
+        width: 90%;
+    }
+}
+
+@media(max-width:730px) {
+    .mainbtn .but {
+        width: 65%;
+    }
+    .header-container .available-category #hemant-button,
+    .header-container .search-specific #display-result {
+        width: 100%;
+    }
+    .Home_page {
+        width: 100%;
+        border: none;
+    }
+    .Home_page .childbody hr.title_hr,
+    .Home_page .childbody .bodyhandler hr.container_hr {
+        margin-top: 0px;
+        border-top: none;
+        border-bottom: none;
+    }
+    .childbody .title {
+        margin-bottom: 0px;
+        border-bottom: 2px solid purple;
+        font-size: 25px;
+    }
+}
+
+@media(max-width:550px) {
+    .childbody .bodyhandler .Imgg {
+        width: 85%;
+        justify-content: center;
+    }
+    .childbody .bodyhandler #im1 {
+        margin-right: 7%;
+        margin-bottom: 30px;
+    }
+    .childbody .bodyhandler #im2 {
+        margin-left: 7%;
+        margin-bottom: 30px;
+    }
+    .childbody .bodyhandler #\31,
+    .childbody .bodyhandler #\33 {
+        margin-left: 7%;
+        font-size: 19px;
+    }
+    .childbody .title {
+        font-size: 19px;
+    }
+    .childbody .bodyhandler #\32 {
+        font-size: 19px;
+    }
+    .header-container .search-specific select {
+        width: 70px;
+    }
+    .header-container {
+        width: 90%;
+    }
+}
