@@ -79,12 +79,12 @@ nav h1 {
 }
 
 #changer {
-    color: red;
+    color: royalblue;
+    font-weight: 600;
 }
 
 #gle {
-    color: #6c5ce7;
-    background-color: #dfe6e9;
+    color: red;
     font-weight: 600;
     padding: 0 4px;
     border-radius: 5px;
