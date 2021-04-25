@@ -1,6 +1,6 @@
 # newblogrepo
 
-Hosted at # https://chimkandi-blog.herokuapp.com/
+Hosted at https://chimkandi-blog.herokuapp.com/
 
 # Contributer
 
