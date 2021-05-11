@@ -13,8 +13,10 @@ Hosted at https://chimkandi-blog.herokuapp.com/
 <img src="redmerepo/m1.png">
 <img src="redmerepo/m2.png">
 
+<h1>Blog Categories Filter Page</h1>
 <img src="redmerepo/m3.png">
 
+<h1>About Us Page</h1>
 <img src="redmerepo/m4.png">
 
 <img src="redmerepo/m5.png">
