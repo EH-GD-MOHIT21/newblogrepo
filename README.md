@@ -22,6 +22,8 @@ Hosted at https://chimkandi-blog.herokuapp.com/
 <h1>Navbar: </h1>
 <img src="redmerepo/m5.png">
 
+<h1>Live Score Page: </h1>
 <img src="redmerepo/m6.png">
 
+<h1>Categories Page: </h1>
 <img src="redmerepo/m7.png">
