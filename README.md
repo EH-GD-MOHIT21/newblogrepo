@@ -10,16 +10,16 @@ Hosted at https://chimkandi-blog.herokuapp.com/
 4. Nested Astra (Frontend) 
 
 
-<img src="redmereso/m1.png">
+<img src="redmerepo/m1.png">
 
-<img src="redmereso/m2.png">
+<img src="redmerepo/m2.png">
 
-<img src="redmereso/m3.png">
+<img src="redmerepo/m3.png">
 
-<img src="redmereso/m4.png">
+<img src="redmerepo/m4.png">
 
-<img src="redmereso/m5.png">
+<img src="redmerepo/m5.png">
 
-<img src="redmereso/m6.png">
+<img src="redmerepo/m6.png">
 
-<img src="redmereso/m7.png">
+<img src="redmerepo/m7.png">
