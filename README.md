@@ -9,9 +9,8 @@ Hosted at https://chimkandi-blog.herokuapp.com/
 3. Gopi Krishna (Blogwriter)
 4. Nested Astra (Frontend) 
 
-
+<h1>Home Page Nested Blog</h1>
 <img src="redmerepo/m1.png">
-
 <img src="redmerepo/m2.png">
 
 <img src="redmerepo/m3.png">
